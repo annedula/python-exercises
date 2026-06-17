@@ -1,7 +1,6 @@
 def computegrade(score):
     if score < 0.0 or score > 1.0:
-        grade = 'Bad score'
-        print(grade)
+        return 'Bad score'
     elif score >= 0.9:
         grade = 'A'
     elif score >= 0.8:
@@ -17,8 +16,7 @@ def computegrade(score):
 while True:
     try:
         score = float(input('Enter Score: '))
-        grade = computegrade(score)
-
-        print(grade)
+        print(computegrade(score))
+        break
     except:
         print('Bad score')
